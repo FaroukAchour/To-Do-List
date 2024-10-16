@@ -6,12 +6,12 @@ export interface ModalProps {
   id: string
 }
 
-const ModalExample: React.FC<ModalProps> = ({ open, handleClose, id }) => {
+const CreateTaskModal: React.FC<ModalProps> = ({ open, handleClose, id }) => {
   return (
     <Modal open={open} handleClose={handleClose} id={id}>
-      <div className="div">Modal body</div>
+      <div className="div">Create Task Form</div>
     </Modal>
   )
 }
 
-export default ModalExample
+export default CreateTaskModal

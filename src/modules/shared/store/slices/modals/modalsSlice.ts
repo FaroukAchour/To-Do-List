@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 const initialState: ModalsState = {
-  'example-modal': { open: false },
+  'create-task-modal': { open: false },
 }
 
 export const modalsSlice = createSlice({
