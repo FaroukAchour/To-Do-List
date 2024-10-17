@@ -35,16 +35,39 @@ export const TasksApi = api.injectEndpoints({
         }
       },
     }),
+    createTask: build.mutation({
+      query: (body) => {
+        return {
+          url: 'todos',
+          method: 'POST',
+          body,
+        }
+      },
+    }),
     updateTask: build.mutation({
       query: ({ id, ...body }) => {
         return {
           url: `todos/${id}`,
-          method: 'POST',
+          method: 'PATCH',
           body,
+        }
+      },
+    }),
+    deleteTask: build.mutation({
+      query: ({ id }) => {
+        return {
+          url: `todos/${id}`,
+          method: 'DELETE',
         }
       },
     }),
   }),
 })
 
-export const { useGetTasksQuery, useGetOneTaskQuery, useUpdateTaskMutation } = TasksApi
+export const {
+  useGetTasksQuery,
+  useGetOneTaskQuery,
+  useCreateTaskMutation,
+  useUpdateTaskMutation,
+  useDeleteTaskMutation,
+} = TasksApi

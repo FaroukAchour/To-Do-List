@@ -1,4 +1,4 @@
-import CreateTaskModal from '@src/modules/dashboard/components/ModalExample'
+import CreateTaskModal from '@src/modules/dashboard/components/CreateTaskModal'
 import { useAppDispatch, useAppSelector } from '../store'
 import { closeModal } from '../store/slices/modals/modalsSlice'
 
