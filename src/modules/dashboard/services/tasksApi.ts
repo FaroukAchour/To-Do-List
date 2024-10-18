@@ -1,11 +1,11 @@
 import { api } from '@src/modules/shared/services/api'
 
-interface ITask {
-  id: string
-  name?: string
-  status?: string
-  color?: string
-}
+// interface ITask {
+//   id: string
+//   name?: string
+//   status?: string
+//   color?: string
+// }
 
 export const TasksApi = api.injectEndpoints({
   endpoints: (build) => ({
@@ -17,16 +17,16 @@ export const TasksApi = api.injectEndpoints({
         }
       },
 
-      transformResponse: (response: { payload: ITask[] }): ITask[] => {
-        return response.payload
-      },
+      // transformResponse: (response: { payload: ITask[] }): ITask[] => {
+      //   return response.payload
+      // },
 
-      providesTags: (result: any) => {
-        return [
-          result?.map(({ id }: { id: string }) => ({ type: 'TASKS', id })),
-          { type: 'TASKS', id: 'TASK' },
-        ]
-      },
+      // providesTags: (result: any) => {
+      //   return [
+      //     result?.map(({ id }: { id: string }) => ({ type: 'TASKS', id })),
+      //     { type: 'TASKS', id: 'TASK' },
+      //   ]
+      // },
     }),
     getOneTask: build.query({
       query: (id) => {

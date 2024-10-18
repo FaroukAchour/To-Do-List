@@ -4,3 +4,14 @@
 @use '../modules' as *;
 
 @forward './dark.scss';
+
+.ant-tabs .ant-tabs-ink-bar {
+  display: none;
+}
+
+:where(.css-dev-only-do-not-override-1hpnbz2).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: #131f3c;
+  text-shadow: none;
+}
