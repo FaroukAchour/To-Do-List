@@ -21,7 +21,7 @@ const CreateTaskModal: React.FC<ModalProps> = ({ open, handleClose, id }) => {
   const [createTask] = useCreateTaskMutation()
 
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-    createTask(values)
+    createTask(values).then(() => handleClose(id))
   }
 
   const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
